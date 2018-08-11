@@ -11,17 +11,21 @@
 	}
 }(this, function(moment) {
 	moment.buddha = function () {
-		return {
+		var day = this.day()
+    var month = this.month()
+    return {
       year: this.year() + 543,
-      month: this.month(),
-      dd: this.day()
+      month: month>9 ? month :'0'+ month,
+      day: day > 9 ? day: '0' + day
     }
 	}
 	moment.fn.buddha = function () {
+    var day = this.day()
+    var month = this.month()
     return {
       year: this.year() + 543,
-      month: this.month,
-      dd: this.day()
+      month: month>9 ? month :'0'+ month,
+      day: day > 9 ? day: '0' + day
     }
 	}
 
