@@ -18,7 +18,6 @@
     }
 	}
 	moment.fn.buddha = function () {
-    debugger
     return {
       year: this.year() + 543,
       month: this.month,
