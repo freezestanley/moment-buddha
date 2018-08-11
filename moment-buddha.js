@@ -12,10 +12,19 @@
 }(this, function(moment) {
 	moment.buddha = function () {
 		debugger
-		
+		return {
+      year: this.year() + 543,
+      month: this.month,
+      dd: this.day()
+    }
 	}
 	moment.fn.buddha = function () {
-		debugger
+    debugger
+    return {
+      year: this.year() + 543,
+      month: this.month,
+      dd: this.day()
+    }
 	}
 
 	return moment;
