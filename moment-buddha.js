@@ -11,15 +11,20 @@
 	}
 }(this, function(moment) {
 	moment.buddha = function () {
-		return {
-      year: Number(this.format('YYYY')) + 543,
+		var isBuddha = new Date().getFullYear() + (543/2)
+    return {
+      year: isBuddha < Number(this.format('YYYY')) ? this.format('YYYY') : Number(this.format('YYYY')) + 543 ,
       month: this.format('MM'),
       day: this.format('DD')
     }
-	}
+  }
+  moment.fn.isBuddha = function () {
+    return (new Date().getFullYear() + (543/2)) < Number(this.format('YYYY'))
+  }
 	moment.fn.buddha = function () {
+    var isBuddha = new Date().getFullYear() + (543/2)
     return {
-      year: Number(this.format('YYYY')) + 543,
+      year: isBuddha < Number(this.format('YYYY')) ? this.format('YYYY') : Number(this.format('YYYY')) + 543 ,
       month: this.format('MM'),
       day: this.format('DD')
     }
